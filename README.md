@@ -21,6 +21,17 @@ sudo groupadd tomcat
 sudo useradd -M -s /bin/nologin -g tomcat -d /app/tomcat tomcat
 ~~~
 
+### Install Tomcat
+
+Update Download URL from : http://tomcat.apache.org/download-80.cgi
+~~~
+cd ~
+wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
+~~~
+
+
+
+
 ### References
 - How to insall Apache Tomcat8 on CentOS 7 :
 
