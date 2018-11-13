@@ -4,5 +4,7 @@
 
 ## JDK8
 
-~~~sudo apt install openjdk-8-jdk || sudo yum install java-1.8.0-openjdk~~~
+~~~
+sudo apt install openjdk-8-jdk || sudo yum install java-1.8.0-openjdk
+~~~
 
