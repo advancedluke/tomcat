@@ -1,6 +1,6 @@
-# tomcat
+# Tomcat
 
-1. JVM Install
+- JVM Install
 
 ## JDK8
 
