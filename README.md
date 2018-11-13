@@ -18,7 +18,7 @@ JAVA_HOME=/usr/lib/jvm/java
 ### Create Tomcat User
 ~~~
 sudo groupadd tomcat
-sudo user add -M -s /bin/nologin -g tomcat -d /opt/tomcat tomcat
+sudo user add -M -s /bin/nologin -g tomcat -d /app/tomcat tomcat
 ~~~
 
 ### References
