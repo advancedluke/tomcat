@@ -16,8 +16,10 @@ JAVA_HOME=/usr/lib/jvm/java
 ~~~
 
 ### Create Tomcat User
-
-
+~~~
+sudo groupadd tomcat
+sudo user add -M -s /bin/nologin -g tomcat -d /opt/tomcat tomcat
+~~~
 
 ### References
 - How to insall Apache Tomcat8 on CentOS 7 :
