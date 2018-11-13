@@ -30,8 +30,6 @@ wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar
 sudo mkdir /app/tomcat -p
 sudo tar -xvzf apache-tomcat-8*tar.gz -C /app/tomcat --strip-components=1
 sudo chgrp -R tomcat /app/tomcat
-sudo chmod -R g+r conf
-sudo chmod g+x conf
 sudo chown -R tomcat /app/tomcat
 ~~~
 
