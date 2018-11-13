@@ -27,7 +27,7 @@ Update Download URL from : http://tomcat.apache.org/download-80.cgi
 ~~~
 cd ~
 wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
-sudo mkdir /app/tomcat
+sudo mkdir /app/tomcat -p
 sudo tar -xvzf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
 sudo chgrp -R tomcat /opt/tomcat
 sudo chmod -R g+r conf
