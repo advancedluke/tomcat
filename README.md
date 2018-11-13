@@ -11,7 +11,7 @@ sudo apt install wget openjdk-8-jdk -y || sudo yum install wget java-1.8.0-openj
 - JAVA HOME location
 ~~~
 #### on centos7
-JAVA_HOME=/usr/lib/jvm/java
+JAVA_HOME=/usr/lib/jvm/jre
 
 ~~~
 
@@ -33,6 +33,24 @@ sudo chgrp -R tomcat /app/tomcat
 sudo chown -R tomcat /app/tomcat
 ~~~
 
+
+### Enable APR connector ( Option for Performance )
+~~~
+yum install apr-devel apr-util-devel openssl-devel -y
+sudo yum groupinstall "Development Tools"
+~~~
+
+~~~
+./configure --with-apr=/usr/bin/apr-1-config \
+            --with-java-home=/usr/lib/jvm/java-1.8.0 \
+            --with-ssl=yes \
+            --prefix=/usr
+
+make && make install
+~~~
+
+
+
 ### Install Systemd Unit File ( Service Register )
 
 ~~~
@@ -49,11 +67,11 @@ After=syslog.target network.target
 [Service]
 Type=forking
 
-Environment=JAVA_HOME=/usr/lib/jvm/java
+Environment=JAVA_HOME=/usr/lib/jvm/jre
 Environment=CATALINA_PID=/app/tomcat/temp/tomcat.pid
 Environment=CATALINA_HOME=/app/tomcat
 Environment=CATALINA_BASE=/app/tomcat
-Environment='CATALINA_OPTS=-Xms2G -Xmx2G -server -XX:+UseParallelGC'
+Environment='CATALINA_OPTS=-Xms2G -Xmx2G -server'
 Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 
 ExecStart=/app/tomcat/bin/startup.sh
