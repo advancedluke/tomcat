@@ -26,3 +26,5 @@
           url="jdbc:mysql://localhost:3306/mysql"/>
 ~~~
 
+https://tomcat.apache.org/tomcat-8.5-doc/jdbc-pool.html
+
