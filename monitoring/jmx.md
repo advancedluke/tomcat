@@ -8,3 +8,5 @@ set CATALINA_OPTS=-Dcom.sun.management.jmxremote.port=%my.jmx.port%
   -Dcom.sun.management.jmxremote.authenticate=false
 ~~~
 
+collectd + influxdb + grafana
+http://www.testautomationguru.com/jmx-monitoring-using-collectd-influxdb-grafana/
